@@ -65,7 +65,7 @@ const projects = [
     tags: ["React", "Node.js", "Socket.io", "Redis"],
     category: "Full Stack",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "2wdasd",
     featured: true,
   },
 ];
@@ -81,7 +81,10 @@ export function Projects() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-24 bg-[#FFFDF1] relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-24 bg-[#FFFDF1] relative overflow-hidden"
+    >
       {/* Decorative */}
       <div className="absolute top-0 right-1/4 w-72 h-72 rounded-full bg-[#FFCE99]/40 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-56 h-56 rounded-full bg-[#FF9644]/10 blur-3xl pointer-events-none" />
@@ -91,13 +94,22 @@ export function Projects() {
         <div className="text-center mb-14">
           <p
             className="text-[#FF9644] mb-2"
-            style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 500, fontSize: "0.95rem", letterSpacing: "0.1em" }}
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontWeight: 500,
+              fontSize: "0.95rem",
+              letterSpacing: "0.1em",
+            }}
           >
             MY WORK
           </p>
           <h2
             className="text-[#562F00]"
-            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(2rem, 4vw, 2.75rem)" }}
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              fontSize: "clamp(2rem, 4vw, 2.75rem)",
+            }}
           >
             Featured Projects
           </h2>
@@ -115,7 +127,11 @@ export function Projects() {
                   ? "bg-[#FF9644] text-[#FFFDF1] shadow-lg shadow-[#FF9644]/30"
                   : "bg-[#562F00]/5 text-[#562F00] hover:bg-[#FFCE99]/50 border border-[#562F00]/10"
               }`}
-              style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 500, fontSize: "0.88rem" }}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 500,
+                fontSize: "0.88rem",
+              }}
             >
               {cat}
             </button>
@@ -131,8 +147,13 @@ export function Projects() {
             >
               {/* Featured Badge */}
               {project.featured && (
-                <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-[#FF9644] text-[#FFFDF1]"
-                  style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 600, fontSize: "0.72rem" }}
+                <div
+                  className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-[#FF9644] text-[#FFFDF1]"
+                  style={{
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 600,
+                    fontSize: "0.72rem",
+                  }}
                 >
                   ★ Featured
                 </div>
@@ -150,7 +171,11 @@ export function Projects() {
                   <a
                     href={project.liveUrl}
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF9644] text-[#FFFDF1] hover:bg-[#FFCE99] hover:text-[#562F00] transition-colors"
-                    style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 600, fontSize: "0.82rem" }}
+                    style={{
+                      fontFamily: "'Poppins', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "0.82rem",
+                    }}
                   >
                     <ExternalLink size={14} />
                     Live Demo
@@ -158,7 +183,11 @@ export function Projects() {
                   <a
                     href={project.githubUrl}
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFFDF1]/20 text-[#FFFDF1] border border-[#FFFDF1]/30 hover:bg-[#FFFDF1] hover:text-[#562F00] transition-colors"
-                    style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 600, fontSize: "0.82rem" }}
+                    style={{
+                      fontFamily: "'Poppins', sans-serif",
+                      fontWeight: 600,
+                      fontSize: "0.82rem",
+                    }}
                   >
                     <Github size={14} />
                     Code
@@ -171,13 +200,21 @@ export function Projects() {
                 <div className="flex items-start justify-between mb-2">
                   <h3
                     className="text-[#562F00] group-hover:text-[#FF9644] transition-colors"
-                    style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem" }}
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontWeight: 600,
+                      fontSize: "1.15rem",
+                    }}
                   >
                     {project.title}
                   </h3>
                   <span
                     className="shrink-0 ml-2 px-2 py-0.5 rounded-full bg-[#FFCE99]/40 text-[#562F00]"
-                    style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 500, fontSize: "0.72rem" }}
+                    style={{
+                      fontFamily: "'Poppins', sans-serif",
+                      fontWeight: 500,
+                      fontSize: "0.72rem",
+                    }}
                   >
                     {project.category}
                   </span>
@@ -185,7 +222,12 @@ export function Projects() {
 
                 <p
                   className="text-[#562F00]/60 mb-4"
-                  style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 400, fontSize: "0.87rem", lineHeight: 1.7 }}
+                  style={{
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 400,
+                    fontSize: "0.87rem",
+                    lineHeight: 1.7,
+                  }}
                 >
                   {project.description}
                 </p>
@@ -196,7 +238,11 @@ export function Projects() {
                     <span
                       key={tag}
                       className="px-2.5 py-1 rounded-md bg-[#562F00]/5 text-[#562F00]/70"
-                      style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 500, fontSize: "0.75rem" }}
+                      style={{
+                        fontFamily: "'Poppins', sans-serif",
+                        fontWeight: 500,
+                        fontSize: "0.75rem",
+                      }}
                     >
                       {tag}
                     </span>
@@ -212,10 +258,17 @@ export function Projects() {
           <a
             href="#"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-[#562F00] text-[#562F00] hover:bg-[#562F00] hover:text-[#FFFDF1] transition-all duration-300 group"
-            style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 600, fontSize: "0.95rem" }}
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontWeight: 600,
+              fontSize: "0.95rem",
+            }}
           >
             View All Projects
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition-transform"
+            />
           </a>
         </div>
       </div>
